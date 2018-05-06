@@ -5,6 +5,16 @@
   "author": "Adrian Wawryczuk <adrian.wawryczuk@avra.pl>",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^8.4.1",
     "postcss-cli": "^5.0.0"
+  },
+  "browserslist": [
+    "> 0.05%"
+  ],
+  "scripts": {
+    "css": "postcss --env production -m -o index.min.css index.css"
+  },
+  "dependencies": {
+    "cssnano": "^3.10.0"
   }
 }
