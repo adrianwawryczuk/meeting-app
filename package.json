@@ -12,7 +12,8 @@
     "> 0.05%"
   ],
   "scripts": {
-    "css": "postcss --env production -m -o index.min.css index.css"
+    "start": "postcss --no-map index.css -o index.min.css ",
+    "heroku": "heroku apps:meetingapp-test"
   },
   "dependencies": {
     "cssnano": "^3.10.0"
