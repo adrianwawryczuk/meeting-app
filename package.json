@@ -1,0 +1,10 @@
+{
+  "name": "meeting-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adrian Wawryczuk <adrian.wawryczuk@avra.pl>",
+  "license": "MIT",
+  "devDependencies": {
+    "postcss-cli": "^5.0.0"
+  }
+}
