@@ -3,7 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./index.min.css" />
+    <link rel="stylesheet" href="./index.css" />
 
     <script type="application/ld+json">
       {
@@ -65,15 +65,13 @@
 
 <section class="hero">
 
-    <video class="hero__image" autoplay loop>
+    <video class="hero__image" autoplay loop muted>
         <source src="images/header-video.mp4" type="video/mp4">
-        <source src="images/header-video.ogv" type="video/ogg">
-        <source src="images/header-video.webm" type="video/webm">
     </video>
 
     <div class="hero__content">
         <h1 class="hero__text">
-            Communicate with attendees like never before
+            Communicate with event attendees like never before
         </h1>
 
         <a href="https://meetingapplication.com/get-your-app/"
@@ -126,14 +124,21 @@
         CORE FEATURES
     </h2>
 
+    <p class="section__background-text">
+        CORE FEATURES
+    </p>
+
     <article class="core-features__element">
         <h3 class="core-features__element__header">
             INFORM & ENGAGE
         </h3>
 
-        <video controls class="code-features__video">
-            <source src="images/1_small.mp4" type="video/mp4">
-        </video>
+        <div class="code-features__video-container">
+            <button data-id="video1" class="code-features__video-play"></button>
+            <video id="video1" class="code-features__video">
+                <source src="images/1_small.mp4" type="video/mp4">
+            </video>
+        </div>
 
         <p class="core-features__info">
             Things running behind the schedule? Unexpected change of the conference room? Don't worry, the agenda will
@@ -146,9 +151,13 @@
             PROMOTE SPONSORS
         </h3>
 
-        <video controls class="code-features__video">
-            <source src="images/2_small.mp4" type="video/mp4">
-        </video>
+        <div class="code-features__video-container">
+            <button data-id="video2" class="code-features__video-play"></button>
+            <video id="video2" class="code-features__video">
+                <source src="images/2_small.mp4" type="video/mp4">
+            </video>
+        </div>
+
 
         <p class="core-features__info">
             Make the event sponsorship deal even sweater by offering countless in-app possibilities to promote the
@@ -158,13 +167,16 @@
 
     <article class="core-features__element">
         <h3 class="core-features__element__header">
-            SAVE TIME & MONEY,
-            <br> NO MORE PRINTED MATERIALS
+            SAVE TIME & MONEY
+            <br> ON PRINTED MATERIALS
         </h3>
 
-        <video controls class="code-features__video">
-            <source src="images/3_small.mp4" type="video/mp4">
-        </video>
+        <div class="code-features__video-container">
+            <button data-id="video3" class="code-features__video-play"></button>
+            <video id="video3" class="code-features__video">
+                <source src="images/3_small.mp4" type="video/mp4">
+            </video>
+        </div>
 
         <p class="core-features__info">
             Stop wasting your time and money on designing and printing materials that will be thrown into the bin as
@@ -183,6 +195,10 @@
 </section>
 
 <section id="industries" class="industries">
+    <p class="section__background-text section__background-text--blue">
+        INDUSTRIES
+    </p>
+
     <div class="container">
         <h2 class="white">
             INDUSTRIES
@@ -229,13 +245,17 @@
                     <h3>Clients</h3>
 
                     <div class="industries__info__clients__list">
-                        <img alt="Bayer Company Logo" title="Bayer Company Logo" src="./images/bayer.png" />
 
-                        <img alt="GSK Company Logo" title="GSK Company Logo" src="images/logo-gsk.png" />
+                        <img height="80" alt="Bayer Company Logo" title="Bayer Company Logo"
+                             src="./images/bayer.png" />
 
-                        <img alt="Sanofi Company Logo" title="Sanofi Company Logo" src="images/sanofi.png" />
+                        <img height="60" alt="GSK Company Logo" title="GSK Company Logo" src="images/logo-gsk.png" />
 
-                        <a href="https://meetingapplication.com/pharmaceutical-conference-app" class="button">
+                        <img height="60" alt="Sanofi Company Logo" title="Sanofi Company Logo"
+                             src="images/sanofi.png" />
+
+                        <a href="https://meetingapplication.com/pharmaceutical-conference-app"
+                           class="button industries__info__clients__button">
                             Learn more
                         </a>
                     </div>
@@ -264,17 +284,22 @@
                     <h3>Clients</h3>
 
                     <div class="industries__info__clients__list">
-                        <img alt="EU Commission  Logo" title="EU Commission Logo" src="images/komisja.png" />
-
-                        <img alt="Singapore Government Logo"
-                             title="Singapore Government Logo"
-                             src="images/singappur.png" />
-
-                        <img alt="US Health Department Logo"
+                        <img height="55"
+                             alt="US Health Department Logo"
                              title="US Health Department Logo"
                              src="images/ushealthdep.png" />
 
-                        <a href="https://meetingapplication.com/pharmaceutical-conference-app" class="button">
+
+                        <img height="25"
+                             alt="Singapore Government Logo"
+                             title="Singapore Government Logo"
+                             src="images/singappur.png" />
+
+                        <img height="50" alt="EU Commission  Logo" title="EU Commission Logo"
+                             src="images/komisja.png" />
+
+
+                        <a href="https://meetingapplication.com/pharmaceutical-conference-app" class="button industries__info__clients__button">
                             Learn more
                         </a>
                     </div>
@@ -304,15 +329,15 @@
                     <h3>Clients</h3>
 
                     <div class="industries__info__clients__list">
-                        <img alt="Raindance Logo" title="Raindance Logo" src="images/raindance.png" />
+                        <img height="30" alt="Raindance Logo" title="Raindance Logo" src="images/raindance.png" />
 
-                        <img alt="Sunny side of Doc Logo" title="Sunny side of Doc Logo"
+                            <img height="55" alt="Sunny side of Doc Logo" title="Sunny side of Doc Logo"
                              src="images/logo-sunnyside.png" />
 
-                        <img alt="Imagination Days Cannes Logo" title="Imagination Days Cannes Logo"
+                        <img height="50" alt="Imagination Days Cannes Logo" title="Imagination Days Cannes Logo"
                              src="images/imaginationdayscannes.png" />
 
-                        <a href="https://meetingapplication.com/film-festival-app/" class="button">
+                        <a href="https://meetingapplication.com/film-festival-app/" class="button industries__info__clients__button">
                             Learn more
                         </a>
                     </div>
@@ -342,13 +367,13 @@
                     <h3>Clients</h3>
 
                     <div class="industries__info__clients__list">
-                        <img src="images/dhl-logo.jpg" />
+                        <img height="50" src="images/dhl-logo.jpg" />
 
-                        <img src="images/AccorHotels_Logo.png" />
+                        <img height="22" src="images/AccorHotels_Logo.png" />
 
-                        <img src="images/sephora-logo.png" />
+                        <img height="22" src="images/sephora-logo.png" />
 
-                        <a href="https://meetingapplication.com/corporate-event-app/" class="button">
+                        <a href="https://meetingapplication.com/corporate-event-app/" class="button industries__info__clients__button">
                             Learn more
                         </a>
                     </div>
@@ -363,6 +388,10 @@
     <h2 class="blue">
         TESTIMONIALS
     </h2>
+
+    <p class="section__background-text section__background-text--numbers">
+        NUMBERS
+    </p>
 
     <article class="testimonials__users">
         <div class="testimonials__user">
@@ -510,6 +539,10 @@
 </section>
 
 <section class="support">
+    <p class="section__background-text">
+        SUPPORT
+    </p>
+
     <div class="container support__container">
         <div class="support__text">
             <h2 class="support__header blue">
@@ -590,7 +623,7 @@
                 </a>
 
                 <a href="http://help.meetingapplication.com/meeting-application-eng" class="footer__nav__link">
-                    Helfdesk
+                    Helpdesk
                 </a>
 
                 <a href="https://www.g2crowd.com/products/meeting-application/reviews" class="footer__nav__link">

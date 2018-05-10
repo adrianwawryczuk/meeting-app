@@ -2,6 +2,8 @@ initIndustries();
 
 initNumbers();
 
+initPlayButtons();
+
 function initNumbers() {
     var options = {
         useEasing: true,
@@ -66,9 +68,17 @@ function initIndustries() {
         document.querySelector('[data-showid="' + dataShowName + '"]')
                 .classList
                 .add(classVisible);
+
+        element.classList.add('industries__button--active');
+
     }
 
     function hideAllIndustries() {
+        document.querySelectorAll('.industries__button--active')
+                .forEach(function(element) {
+                    element.classList.remove('industries__button--active');
+                });
+
         document.querySelectorAll('.' + classVisible)
                 .forEach(function(element) {
                     element.classList.remove(classVisible);
@@ -97,6 +107,46 @@ function initIndustries() {
             } else {
                 index = 0;
             }
+        }
+    }
+}
+
+function initPlayButtons() {
+    var buttons = document.querySelectorAll('[data-id]');
+    var videos = document.querySelectorAll('.code-features__video');
+
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function(element) {
+            toggleVideo(element.target.attributes.getNamedItem('data-id').value);
+        });
+    });
+
+    videos.forEach(function(video) {
+
+        video.addEventListener('ended', function(video) {
+
+            var button = document.querySelector('[data-id="' + video.target.id + '"]');
+
+            button.classList.remove('code-features__video-play--playing');
+        });
+
+        video.addEventListener('click', function(video) {
+            if (!video.target.paused) {
+                toggleVideo(video.target.id);
+            }
+        });
+    });
+
+    function toggleVideo(dataId) {
+        var button = document.querySelector('[data-id="' + dataId + '"]');
+
+        var video = document.getElementById(dataId);
+        if (video.paused) {
+            video.play();
+            button.classList.add('code-features__video-play--playing');
+        } else {
+            video.pause();
+            button.classList.remove('code-features__video-play--playing');
         }
     }
 }
