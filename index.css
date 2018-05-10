@@ -218,7 +218,7 @@ a:hover {
 
 .hero__content {
     position: absolute;
-    top: 70%;
+    top: 65%;
     /* left: 50%; */
     transform: translate(0%, -50%);
     max-width: 100%;
