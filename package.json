@@ -12,7 +12,7 @@
     "> 0.05%"
   ],
   "scripts": {
-    "start": "postcss index.css -m -o index.min.css "
+    "start": "postcss index.css -m --map -o index.min.css "
   },
   "dependencies": {
     "cssnano": "^3.10.0"
