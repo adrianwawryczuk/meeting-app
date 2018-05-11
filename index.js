@@ -151,3 +151,21 @@ function initPlayButtons() {
     }
 }
 
+window.toggleMenu = function() {
+    var menu = document.querySelector('.nav_menu');
+
+    if(menu.classList.contains('nav_menu--visible')) {
+        removeNavMenuVisible();
+    } else {
+        menu.classList.add('nav_menu--visible');
+    }
+};
+
+window.addEventListener()
+
+function removeNavMenuVisible() {
+    var menu = document.querySelector('.nav_menu');
+
+    menu.classList.remove('nav_menu--visible');
+}
+
