@@ -12,7 +12,7 @@
     "> 0.05%"
   ],
   "scripts": {
-    "start": "postcss index.css -m --map -o index.min.css ",
+    "start": "postcss index.css --no-map -o index.min.css ",
     "heroku": "git push https://git.heroku.com/meeting-app-test.git"
   },
   "dependencies": {
