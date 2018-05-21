@@ -130,7 +130,7 @@ a:hover {
 .nav__container {
     padding: 10px 0;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     margin: 0 auto;
     align-items: center;
     max-width: 1170px;
@@ -182,7 +182,7 @@ a:hover {
     }
 
     .nav_menu--visible {
-        height: 230px;
+        height: 280px;
     }
 }
 
@@ -203,6 +203,26 @@ a:hover {
 
 .nav__button:last-child {
     margin-left: 10px;
+}
+
+@media (max-width: 500px) {
+    .nav__button {
+        display: none;
+    }
+}
+
+.nav__button--responsive {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .nav__button--responsive {
+        display: block;
+        margin: 0;
+        text-align: center;
+        margin:  5px;
+        padding: 5px;
+    }
 }
 
 .nav__link {
@@ -371,6 +391,7 @@ a:hover {
 
 .core-features__element {
     max-width: 340px;
+    flex-basis: 340px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -397,6 +418,9 @@ a:hover {
     background-size: 100% 100%;
     border: none;
     outline: none;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .code-features__video-play--playing {
@@ -411,6 +435,7 @@ a:hover {
     background-image: url('images/phone.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position: relative;
 }
 
 .core-features__element__header {
@@ -431,6 +456,7 @@ a:hover {
     font-weight: 500;
     padding: 0 30px;
     flex-grow: 1;
+    max-width: 100%;
 }
 
 .core-features__button {
@@ -501,6 +527,13 @@ a:hover {
     display: flex;
 }
 
+@media (max-width: 1170px) {
+    .industries__image {
+        width: 200px;
+        overflow: hidden;
+    }
+}
+
 @media (max-width: 992px) {
     .industries__image {
         display: none;
@@ -510,6 +543,10 @@ a:hover {
 .industries__image img {
     -o-object-fit: cover;
     object-fit: cover;
+    width: auto;
+    margin: 0 auto;
+    position: absolute;
+    left: -50%;
 }
 
 .industries__info__block {
@@ -556,6 +593,7 @@ a:hover {
     flex-wrap: wrap;
     flex-direction: column;
     padding: 30px;
+    max-width: 100%;
 }
 
 .industries__info__clients__list {
@@ -564,6 +602,8 @@ a:hover {
     max-width: 100%;
     justify-content: space-around;
 }
+
+
 
 .industries__info__clients__list img:first-child {
     margin-left: 0;
@@ -577,6 +617,16 @@ a:hover {
     width: auto;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    .industries__info__clients__list {
+        flex-wrap: wrap;
+    }
+
+    .industries__info__clients__list img {
+        margin: 10px;
+    }
 }
 
 .industries__info__clients__button {
@@ -604,6 +654,7 @@ a:hover {
 
 .testimonials__user {
     max-width: 315px;
+    flex-basis: 315px;
     box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.13);
     display: flex;
     flex-direction: column;
@@ -625,6 +676,9 @@ a:hover {
     width: 80px;
     position: absolute;
     top: -40px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .testimonial__user-name {
@@ -646,6 +700,7 @@ a:hover {
     text-align: justify;
     margin-top: 25px;
     line-height: 2;
+    max-width: 100%;
 }
 
 .testimonials__numbers {
@@ -659,7 +714,7 @@ a:hover {
     max-width: 350px;
     border-radius: 6px;
     background-color: rgb(24, 40, 59);
-    flex-basis: 300px;
+    flex-basis: 350px;
     min-height: 200px;
     flex-grow: 1;
     color: #FFFFFF;
@@ -797,6 +852,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .blog__image {
@@ -854,6 +910,12 @@ a:hover {
         width: 100%;
         flex-direction: row;
         justify-content: center;
+    }
+}
+
+@media (max-width: 350px) {
+    .footer__logo {
+        flex-wrap: wrap;
     }
 }
 
@@ -930,7 +992,6 @@ a:hover {
     flex-direction: row;
 }
 
-
 .footer__social {
     display: flex;
     justify-content: center;
@@ -944,6 +1005,18 @@ a:hover {
         flex-wrap: wrap;
     }
 }
+
+@media (max-width: 450px) {
+    .footer__nav__menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer__social {
+        flex-wrap: wrap;
+    }
+}
+
 
 .footer__social__image {
     margin: 10px;

@@ -6,13 +6,17 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^8.4.1",
-    "postcss-cli": "^5.0.0"
+    "postcss-cli": "^5.0.0",
+    "postcss-flexbugs-fixes": "^3.3.1"
   },
   "browserslist": [
-    "> 0.05%"
+    "Firefox >= 39",
+    "Chrome >= 38",
+    "IE >= 10",
+    "Edge >= 13"
   ],
   "scripts": {
-    "start": "postcss index.css --no-map -o index.min.css ",
+    "start": "postcss index.css --watch --no-map -o index.min.css ",
     "heroku": "git push https://git.heroku.com/meeting-app-test.git"
   },
   "dependencies": {

@@ -12,16 +12,40 @@ function initNumbers() {
     };
 
     var numbers = [
-        { animation: new CountUp('eventsNumber', 0, 250, 0, 2.5, options), selector: 'eventsNumber', animated: false},
-        { animation: new CountUp('usersNumber', 0, 100000, 0, 1.5, options), selector: 'usersNumber', animated: false},
-        { animation: new CountUp('screenViewsNumber', 0, 6400000, 0, 1.5, options), selector: 'screenViewsNumber', animated: false},
-        { animation: new CountUp('timeUsageNumber', 0, 5, 0, 3.5, options), selector: 'timeUsageNumber', animated: false},
-        { animation: new CountUp('countriesNumber', 0, 31, 0, 2.5, options), selector: 'countriesNumber', animated: false},
-        { animation: new CountUp('continentsNumber', 0, 6, 0, 2.5, options), selector: 'continentsNumber', animated: false},
+        {
+            animation: new CountUp('eventsNumber', 0, 250, 0, 2.5, options),
+            selector: 'eventsNumber',
+            animated: false,
+        },
+        {
+            animation: new CountUp('usersNumber', 0, 100000, 0, 1.5, options),
+            selector: 'usersNumber',
+            animated: false,
+        },
+        {
+            animation: new CountUp('screenViewsNumber', 0, 6400000, 0, 1.5, options),
+            selector: 'screenViewsNumber',
+            animated: false,
+        },
+        {
+            animation: new CountUp('timeUsageNumber', 0, 5, 0, 3.5, options),
+            selector: 'timeUsageNumber',
+            animated: false,
+        },
+        {
+            animation: new CountUp('countriesNumber', 0, 31, 0, 2.5, options),
+            selector: 'countriesNumber',
+            animated: false,
+        },
+        {
+            animation: new CountUp('continentsNumber', 0, 6, 0, 2.5, options),
+            selector: 'continentsNumber',
+            animated: false,
+        },
     ];
 
     window.addEventListener('scroll', function() {
-        for (var i = 0; i<numbers.length; i++) {
+        for (var i = 0; i < numbers.length; i++) {
             var number = numbers[i];
 
             if (isNumbersInViewport(number.selector) && !number.animated) {
@@ -49,7 +73,7 @@ function initIndustries() {
     var buttons = document.querySelectorAll('[data-show]');
     var interval = createInterval();
 
-    buttons.forEach(function(button) {
+    forEach(buttons, function(button) {
         button.addEventListener('click', function(element) {
 
             if (interval) {
@@ -74,15 +98,14 @@ function initIndustries() {
     }
 
     function hideAllIndustries() {
-        document.querySelectorAll('.industries__button--active')
-                .forEach(function(element) {
-                    element.classList.remove('industries__button--active');
-                });
 
-        document.querySelectorAll('.' + classVisible)
-                .forEach(function(element) {
-                    element.classList.remove(classVisible);
-                });
+        forEach(document.querySelectorAll('.industries__button--active'), function(element) {
+            element.classList.remove('industries__button--active');
+        });
+
+        forEach(document.querySelectorAll('.' + classVisible), function(element) {
+            element.classList.remove(classVisible);
+        });
     }
 
     function getAllIndustries() {
@@ -115,13 +138,13 @@ function initPlayButtons() {
     var buttons = document.querySelectorAll('[data-id]');
     var videos = document.querySelectorAll('.code-features__video');
 
-    buttons.forEach(function(button) {
+    forEach(buttons, function(button) {
         button.addEventListener('click', function(element) {
             toggleVideo(element.target.attributes.getNamedItem('data-id').value);
         });
     });
 
-    videos.forEach(function(video) {
+    forEach(videos, function(video) {
 
         video.addEventListener('ended', function(video) {
 
@@ -154,18 +177,22 @@ function initPlayButtons() {
 window.toggleMenu = function() {
     var menu = document.querySelector('.nav_menu');
 
-    if(menu.classList.contains('nav_menu--visible')) {
+    if (menu.classList.contains('nav_menu--visible')) {
         removeNavMenuVisible();
     } else {
         menu.classList.add('nav_menu--visible');
     }
 };
 
-window.addEventListener()
-
 function removeNavMenuVisible() {
     var menu = document.querySelector('.nav_menu');
 
     menu.classList.remove('nav_menu--visible');
+}
+
+function forEach(elements, callback) {
+    for (var i = 0; i < elements.length; i++) {
+        callback(elements[i]);
+    }
 }
 
