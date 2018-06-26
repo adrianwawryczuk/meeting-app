@@ -13,28 +13,32 @@
   font-weight: 600;
   box-shadow: 0px 8px 43px 0px rgba(0, 0, 0, 0.21);
   transition: box-shadow 50ms linear;
-}
 
-.button:hover {
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.21);
-}
+  &:hover {
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.21);
+  }
 
-.button--secondary {
-  background: rgb(0, 174, 239);
-  min-width: 80px;
-}
+  &--medium {
+    border-radius: 8px;
+    width: 175px;
+    height: 40px;
+  }
 
-.button--medium {
-  border-radius: 8px;
-  width: 175px;
-  height: 40px;
-}
+  &--big {
+    background-image: linear-gradient(79deg, rgb(208, 27, 74) 0%, rgb(255, 92, 134) 100%);
+    width: 317px;
+    height: 50px;
+    font-size: 19px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
 
-.button--big {
-  background-image: linear-gradient(79deg, rgb(208, 27, 74) 0%, rgb(255, 92, 134) 100%);
-  width: 317px;
-  height: 50px;
-  font-size: 19px;
-  font-weight: 600;
-  border-radius: 8px;
+  &--secondary {
+    background: rgb(0, 174, 239);
+    min-width: 80px;
+  }
+
+  &--blue {
+
+  }
 }
