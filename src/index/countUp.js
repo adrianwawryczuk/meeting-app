@@ -1,18 +1,4 @@
-/*
-
-	countUp.js
-	by @inorganik
-
-*/
-
-// target = id of html element or var of previously selected html element where counting occurs
-// startVal = the value you want to begin at
-// endVal = the value you want to arrive at
-// decimals = number of decimal places, default 0
-// duration = duration of animation in seconds, default 2
-// options = optional object of options (see below)
-
-var CountUp = function(target, startVal, endVal, decimals, duration, options) {
+export function CountUp(target, startVal, endVal, decimals, duration, options) {
 
 	var self = this;
 	self.version = function () { return '1.9.3'; };

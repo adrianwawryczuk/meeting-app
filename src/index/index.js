@@ -1,3 +1,6 @@
+import { CountUp } from './countUp';
+import './index.scss';
+
 initIndustries();
 
 initNumbers();

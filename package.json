@@ -6,6 +6,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^8.4.1",
+    "html-webpack-plugin": "^4.0.0-alpha",
     "postcss-cli": "^5.0.0",
     "postcss-flexbugs-fixes": "^3.3.1"
   },
@@ -16,10 +17,26 @@
     "Edge >= 13"
   ],
   "scripts": {
-    "start": "postcss index.css --watch --no-map -o index.min.css ",
+    "start": "webpack-serve ./webpack.config.babel.js",
     "heroku": "git push https://git.heroku.com/meeting-app-test.git"
   },
   "dependencies": {
-    "cssnano": "^3.10.0"
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "cssnano": "^3.10.0",
+    "html-loader": "^0.5.5",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-serve": "^1.0.4"
   }
 }
