@@ -45,18 +45,19 @@ module.exports = {
                     "url-loader",
                 ]
             },
+            { test: /\.hbs/, loader: "handlebars-loader" }
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Home',
             filename: 'index.html',
-            template: './src/index/index.html'
+            template: './src/index/index.hbs'
         }),
         new HtmlWebpackPlugin({
             title: 'Pricing',
             filename: 'pricing.html',
-            template: './src/pricing/pricing.html'
+            template: './src/pricing/pricing.hbs'
         })
     ],
 };
