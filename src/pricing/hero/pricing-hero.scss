@@ -43,6 +43,11 @@
 
   &__app {
     display: flex;
+    width: 425px;
+
+    &--right {
+      justify-content: flex-end;
+    }
 
     &:first-child {
       margin-right: 20px;
@@ -92,9 +97,5 @@
       margin-bottom: 20px;
       font-size: 14px;
     }
-  }
-
-  &__company-logo {
-
   }
 }

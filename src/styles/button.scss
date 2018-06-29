@@ -24,6 +24,17 @@
     height: 40px;
   }
 
+  &--small {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    width: 125px;
+    margin: 6px auto;
+    margin-top: 25px;
+    border-radius: 8px;
+  }
+
   &--big {
     background-image: linear-gradient(79deg, rgb(208, 27, 74) 0%, rgb(255, 92, 134) 100%);
     width: 317px;
