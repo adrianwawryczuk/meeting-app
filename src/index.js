@@ -1,3 +1,3 @@
 import './styles.scss';
-import './index/index';
-import './pricing/pricing';
+import './index/index.js';
+import './pricing/pricing.js';

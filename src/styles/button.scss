@@ -38,7 +38,8 @@
     min-width: 80px;
   }
 
-  &--blue {
-
+  &--empty {
+    background-image: none;
+    border: 2px solid rgb(208, 27, 74);
   }
 }

@@ -1,11 +1,13 @@
 import { CountUp } from './countUp';
 import './index.scss';
 
-initIndustries();
+window.onload = () => {
+    initIndustries();
 
-initNumbers();
+    initNumbers();
 
-initPlayButtons();
+    initPlayButtons();
+};
 
 function initNumbers() {
     var options = {
@@ -74,18 +76,22 @@ function initNumbers() {
 function initIndustries() {
     var classVisible = 'industries__info--visible';
     var buttons = document.querySelectorAll('[data-show]');
-    var interval = createInterval();
 
-    forEach(buttons, function(button) {
-        button.addEventListener('click', function(element) {
+    if (buttons.length) {
+        var interval = createInterval();
 
-            if (interval) {
-                clearInterval(interval);
-            }
+        forEach(buttons, function(button) {
+            button.addEventListener('click', function(element) {
 
-            showIndustry(element.target, true);
+                if (interval) {
+                    clearInterval(interval);
+                }
+
+                showIndustry(element.target, true);
+            });
         });
-    });
+    }
+
 
     function showIndustry(element) {
         hideAllIndustries();
@@ -151,7 +157,7 @@ function initPlayButtons() {
 
         video.addEventListener('ended', function(video) {
 
-            var button = document.querySelector('[data-id="' + video.target.id + '"]');
+            var button = document.querySelector(`[data-id="${video.target.id}"]`);
 
             button.classList.remove('code-features__video-play--playing');
         });

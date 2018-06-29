@@ -1,0 +1,100 @@
+.pricing-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  height: calc(100vh - 50px);
+  background-image: url("../../images/pricing-hero-image.png");
+  background-size: cover;
+
+  &__text {
+    font-size: 65px;
+    color: rgb(255, 255, 255);
+    line-height: 0.8;
+    text-align: center;
+    margin: 0;
+
+    &--light {
+      font-weight: 100;
+    }
+
+    &--bold {
+      font-weight: 900;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    margin-top: 80px;
+  }
+
+  &__applications {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__app {
+    display: flex;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    > div:first-child {
+      margin-right: 20px;
+    }
+
+    img {
+      max-width: 180px;
+    }
+  }
+
+  &__app-description {
+    display: flex;
+    flex-direction: column;
+    max-width: 225px;
+    color: white;
+
+    &--right {
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    > a {
+      max-width: 150px;
+      max-height: 35px;
+      font-size: 13px;
+    }
+  }
+
+  &__company-logo {
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  &__company-name {
+    font-size: 20px;
+
+    &--small {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__company-logo {
+
+  }
+}
