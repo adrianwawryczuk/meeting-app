@@ -1,0 +1,67 @@
+.rest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+
+  &__header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__element {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -15px;
+    margin-right: 220px;
+
+    &--right {
+      margin-left: 570px;
+    }
+
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+
+    &--right {
+      align-items: flex-start;
+    }
+  }
+
+  &__text-info {
+    font-size: 16px;
+
+    &--blue {
+      font-size: 20px;
+      color: #19B9F2;
+    }
+  }
+
+  &__hexagon {
+    width: 85px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../images/hexagon-dark-blue.png');
+    margin-left: 30px;
+    margin-right: 30px;
+
+    &--right {
+      background-image: url('../../images/hexagon-blue.png');
+    }
+  }
+
+  &__hexagon-icon {
+    width: 50%;
+  }
+}
