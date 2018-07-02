@@ -69,6 +69,17 @@
     font-size: 20px;
   }
 
+  &__phone {
+    position: relative;
+  }
+
+  &__phone-icon {
+    position: absolute !important;
+    left: 108px;
+    top: 163px;
+    width: 40px;
+  }
+
   &__list {
     list-style: none;
     padding: 0;

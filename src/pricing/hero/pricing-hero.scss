@@ -28,6 +28,17 @@
     }
   }
 
+  &__phone {
+    position: relative;
+  }
+
+  &__phone-icon {
+    position: absolute !important;
+    left: 99px;
+    top: 153px;
+    width: 43px;
+  }
+
   &__button {
     display: flex;
     justify-content: center;
