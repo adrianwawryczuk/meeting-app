@@ -26,11 +26,11 @@
     }
 
     &:first-child {
-      margin-right: 20px;
+      margin-right: 150px;
     }
 
     > div:first-child {
-      margin-right: 30px;
+      margin-right: 40px;
     }
 
     img {
@@ -57,12 +57,12 @@
   }
 
   &__company-logo {
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 130px;
     margin-top: -15px;
     margin-bottom: 20px;
-    margin-left: -5px;
-    margin-right: -5px;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 
   &__company-name {

@@ -10,7 +10,25 @@
     width: 100%;
   }
 
+  &__logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 
+    > img {
+      height: 151px;
+      width: 151px;
+    }
+  }
+
+  &__type-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__small-container {
+    display: flex;
+  }
 
   &__background-text {
 
@@ -24,28 +42,80 @@
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 10px;
-    max-width: 280px;
-    padding: 30px 20px;
+    max-width: 310px;
     padding-bottom: 15px;
     margin: 5px;
+    flex-grow: 1;
+    transition: 50ms ease-in-out;
+
+    &--premium {
+      border-top: 7px solid #18283b;
+      padding-top: 0;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    > * {
+      padding: 0 25px;
+    }
+  }
+
+  &__type-name-container {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &--premium {
+      background-color: #f4f4f4;
+      height: 105px;
+    }
+  }
+
+  &__feature-list-header {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 15px;
+
+    &--blue {
+      color: #19B9F2;
+    }
   }
 
   &__name {
-    font-size: 40px;
+    font-size: 30px;
     color: #19B9F2;
     margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+
+    &--premium {
+      background-color: #f4f4f4;
+      font-size: 40px;
+    }
+
   }
 
   &__name-description {
     text-align: justify;
     font-size: 14px;
-    padding: 20px 10px;
+    padding: 20px;
   }
 
   &__info {
     font-weight: 700;
     font-size: 18px;
     margin-top: 5px;
+    width: 100%;
+    text-align: center;
   }
 
   &__price {
@@ -56,10 +126,19 @@
     border-top: 1px solid lightgray;
     width: 90%;
     text-align: center;
+    height: 70px;
+
+    &--premium {
+      border-top: 1px solid #19B9F2;
+      border-bottom: 1px solid #19B9F2;
+      background-color: #19B9F2;
+      color: white;
+      font-size: 40px;
+      width: 100%;
+    }
   }
 
   &__features-list {
-    padding: 0;
     list-style: none;
     margin: 20px;
   }
@@ -70,6 +149,7 @@
     align-items: center;
     font-weight: 700;
     margin-bottom: 10px;
+    font-size: 17px;
 
     img {
       width: 15px;
@@ -79,11 +159,10 @@
   }
 
   &__button {
-    width: 90%;
-    margin-left: 0;
-    margin-right: 0;
+    width: 87%;
     box-shadow: none;
-    height: 35px;
+    height: 45px;
+    margin-top: auto;
 
     &--black {
       background-color: black;

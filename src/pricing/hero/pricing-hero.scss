@@ -24,6 +24,7 @@
 
     &--bold {
       font-weight: 900;
+      font-size: 100px;
     }
   }
 
@@ -50,7 +51,7 @@
     }
 
     &:first-child {
-      margin-right: 20px;
+      margin-right: 150px;
     }
 
     > div:first-child {
@@ -58,7 +59,7 @@
     }
 
     img {
-      max-width: 210px;
+      max-width: 230px;
     }
   }
 
@@ -74,27 +75,30 @@
     }
 
     > a {
-      max-width: 150px;
-      max-height: 35px;
+      max-width: 160px;
+      max-height: 40px;
       font-size: 13px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
   &__company-logo {
-    height: 120px;
-    width: 120px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: -5px;
-    margin-right: -5px;
+    height: 130px;
+    width: 130px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: -20px;
+    margin-right: -15px;
   }
 
   &__company-name {
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 1.4;
 
     &--small {
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 25px;
+      margin-bottom: 30px;
       font-size: 14px;
     }
   }

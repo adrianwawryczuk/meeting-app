@@ -12,14 +12,11 @@
   }
 
   &__element {
+    position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: -15px;
-    margin-right: 220px;
-
-    &--right {
-      margin-left: 570px;
-    }
+    width: 100%;
 
   }
 
@@ -29,8 +26,16 @@
     align-items: flex-end;
     justify-content: center;
     text-align: right;
+    position: absolute;
+    left: -380px;
+    right: 0;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
 
     &--right {
+      left: 470px;
       align-items: flex-start;
     }
   }
@@ -46,6 +51,8 @@
 
   &__hexagon {
     width: 85px;
+    min-width: 85px;
+    min-height: 100px;
     height: 100px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -53,10 +60,12 @@
     justify-content: center;
     align-items: center;
     background-image: url('../../images/hexagon-dark-blue.png');
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+
 
     &--right {
+      margin-right: -50px;
       background-image: url('../../images/hexagon-blue.png');
     }
   }

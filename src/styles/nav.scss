@@ -93,7 +93,7 @@
 }
 
 .nav__button--responsive {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 500px) {
