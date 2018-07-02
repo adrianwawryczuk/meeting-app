@@ -1,4 +1,4 @@
-* {
+section * {
   box-sizing: border-box;
 }
 
@@ -7,3 +7,18 @@
 @import "services/services";
 @import "rest/rest-assured";
 @import "app-types/app-types";
+
+.change-icon-interval {
+  position: relative;
+
+  img {
+    transition: opacity 1s ease-in-out;
+    position:absolute;
+    top: 0;
+    left: 0;
+  }
+
+  img.transparent {
+    opacity: 0;
+  }
+}

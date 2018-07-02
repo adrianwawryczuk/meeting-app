@@ -13,7 +13,8 @@
   &__logo {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 150px;
+    height: 150px;
 
     > img {
       height: 151px;
@@ -24,6 +25,7 @@
   &__type-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   &__small-container {
