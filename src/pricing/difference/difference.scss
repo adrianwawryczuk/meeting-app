@@ -75,8 +75,8 @@
 
   &__phone-icon {
     position: absolute !important;
-    left: 108px;
-    top: 163px;
+    left: 103px;
+    top: 157px;
     width: 40px;
   }
 
@@ -103,6 +103,7 @@
     }
 
     &--right {
+      justify-content: flex-end;
       &:before {
         content: none;
       }
