@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "webpack-serve ./webpack.config.babel.js",
     "start": "webpack --mode production",
-    "heroku": "git push https://git.heroku.com/meeting-app-test.git"
+    "heroku": "git push heroku master"
   },
   "dependencies": {
     "babel": "^6.23.0",
