@@ -18,6 +18,9 @@
     margin-top: -15px;
     width: 100%;
 
+    @media (max-width: 500px) {
+      margin-top: 10px;
+    }
   }
 
   &__text {
@@ -34,9 +37,39 @@
     margin-right: auto;
     width: 250px;
 
+    @media (max-width: 720px) {
+      width: 140px;
+      margin-top: 10px;
+      left: -250px;
+    }
+
+    @media (max-width: 500px) {
+      position: relative;
+      margin-left: 10px;
+      margin-right: 10px;
+      right: auto;
+      left: 0;
+    }
+
     &--right {
+      display: flex;
+      justify-content: flex-start;
+      text-align: left;
       left: 470px;
       align-items: flex-start;
+
+      @media (max-width: 720px) {
+        width: 140px;
+        margin-top: 20px;
+        left: 350px;
+      }
+
+      @media (max-width: 500px) {
+        position: relative;
+        margin-left: 10px;
+        right: auto;
+        left: 0;
+      }
     }
   }
 
@@ -63,10 +96,18 @@
     margin-right: 40px;
     margin-left: 40px;
 
+    @media (max-width: 500px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
 
     &--right {
       margin-right: -50px;
       background-image: url('../../images/hexagon-blue.png');
+
+      @media (max-width: 500px) {
+        margin-right: 0px;
+      }
     }
   }
 
