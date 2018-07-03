@@ -40,7 +40,12 @@
 
   &__phone {
     position: relative;
-    height: 410px;
+    height: 330px;
+
+    > img {
+      height: 360px;
+      width: auto;
+    }
 
     @media (max-width: 500px) {
       display: none;
@@ -49,8 +54,8 @@
 
   &__phone-icon {
     position: absolute !important;
-    left: 99px;
-    top: 153px;
+    left: 88px;
+    top: 138px;
     width: 43px;
   }
 
@@ -69,7 +74,8 @@
     margin-top: 80px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    max-width: 1000px;
+    align-items: stretch;
 
     @media (max-width: 768px) {
       justify-content: center;
@@ -82,6 +88,7 @@
   &__app {
     display: flex;
     width: 425px;
+    max-height: 410px;
 
     @media (max-width: 500px) {
       width: 50%;
@@ -105,12 +112,6 @@
         margin: 0;
         margin-bottom: 50px;
         margin-left: 50px;
-      }
-    }
-
-    &:last-child {
-      @media (max-width: 500px) {
-        margin-top: 50px !important;
       }
     }
 
@@ -156,6 +157,13 @@
     margin-bottom: 15px;
     margin-left: -20px;
     margin-right: -15px;
+
+    &--bigger {
+      width: 155px;
+      margin-left: -25px;
+      margin-top: -5px;
+      margin-bottom: 26px;
+    }
   }
 
   &__company-name {
@@ -164,7 +172,7 @@
 
     &--small {
       margin-top: 25px;
-      margin-bottom: 30px;
+      margin-bottom: auto;
       font-size: 14px;
     }
   }
