@@ -32,6 +32,7 @@
   &__app {
     display: flex;
     width: 425px;
+    min-height: 310px;
 
     @media (max-width: 500px) {
       width: 50%;
@@ -102,8 +103,8 @@
     &--bigger {
       width: 155px;
       margin-left: -25px;
-      margin-top: -5px;
-      margin-bottom: 26px;
+      margin-top: -25px;
+      margin-bottom: 32px;
     }
   }
 
@@ -119,7 +120,7 @@
     }
 
     > img {
-      height: 414px;
+      height: 425px;
       width: 210px;
     }
   }
@@ -129,6 +130,41 @@
     left: 108px;
     top: 160px;
     width: 40px;
+  }
+
+  &__phone-video-container {
+    height: 425px;
+    width: 210px;
+    position: relative;
+    background-image: url("../../images/application-meeting.png");
+    background-size: 100% 100%;
+  }
+
+  &__video {
+    position: absolute;
+    left: 11px;
+    top: 20px;
+    width: 90%;
+    height: 90%;
+  }
+
+  &__video-play {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 20;
+    background: url('../../images/Play.png');
+    background-size: 100% 100%;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 170px;
+
+    &--playing {
+      display: none;
+    }
   }
 
   &__list {
@@ -166,6 +202,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         width: 17px;
+        min-width: 17px;
         height: 17px;
         padding: 1px;
         margin-left: 10px;

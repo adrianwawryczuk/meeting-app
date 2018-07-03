@@ -6,7 +6,8 @@ window.onload = () => {
 
     initNumbers();
 
-    initPlayButtons();
+    initPlayButtons('code-features');
+    initPlayButtons('difference');
 };
 
 function initNumbers() {
@@ -145,9 +146,9 @@ function initIndustries() {
     }
 }
 
-function initPlayButtons() {
-    var buttons = document.querySelectorAll('[data-id]');
-    var videos = document.querySelectorAll('.code-features__video');
+function initPlayButtons(selector) {
+    var buttons = document.querySelectorAll(`.${selector}__video-play`);
+    var videos = document.querySelectorAll(`.${selector}__video`);
 
     forEach(buttons, function(button) {
         button.addEventListener('click', function(element) {
@@ -161,7 +162,7 @@ function initPlayButtons() {
 
             var button = document.querySelector(`[data-id="${video.target.id}"]`);
 
-            button.classList.remove('code-features__video-play--playing');
+            button.classList.remove(`${selector}__video-play--playing`);
         });
 
         video.addEventListener('click', function(video) {
@@ -177,10 +178,10 @@ function initPlayButtons() {
         var video = document.getElementById(dataId);
         if (video.paused) {
             video.play();
-            button.classList.add('code-features__video-play--playing');
+            button.classList.add(`${selector}__video-play--playing`);
         } else {
             video.pause();
-            button.classList.remove('code-features__video-play--playing');
+            button.classList.remove(`${selector}__video-play--playing`);
         }
     }
 }
