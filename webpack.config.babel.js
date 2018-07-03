@@ -3,9 +3,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        index: './src/index/index.js',
+        pricing: './src/pricing/pricing.js',
+    },
     output: {
         path: __dirname + '/dist',
+        publicPath: __dirname + '/dist',
     },
     module: {
         rules: [
@@ -28,7 +32,7 @@ module.exports = {
                 exclude: /(node_modules)/,
                 use: [
                     {
-                        loader: "style-loader" // creates style nodes from JS strings
+                        loader: MiniCssExtractPlugin.loader,
                     },
                     {
                         loader: "css-loader" // translates CSS into CommonJS
@@ -58,6 +62,9 @@ module.exports = {
             title: 'Pricing',
             filename: 'pricing.html',
             template: './src/pricing/pricing.hbs'
+        }),
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
         })
     ],
 };

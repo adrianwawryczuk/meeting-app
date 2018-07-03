@@ -38,12 +38,11 @@
   &__type {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 10px;
-    max-width: 310px;
+    width: 310px;
     padding-bottom: 15px;
     margin: 5px;
     margin-top: 30px;
@@ -112,6 +111,7 @@
     font-size: 14px;
     padding: 20px;
     height: 90px;
+    width: 100%;
   }
 
   &__info {

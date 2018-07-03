@@ -1,3 +1,4 @@
+import "babel-polyfill"
 import { CountUp } from './countUp';
 import './index.scss';
 
