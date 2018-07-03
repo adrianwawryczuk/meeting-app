@@ -3,20 +3,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 67px;
+  padding-top: 20px;
+  padding-bottom: 50px;
   z-index: -1;
   width: 100%;
   object-fit: cover;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   background-image: url("../../images/pricing-hero-image.png");
   background-size: cover;
-
+  
   &__text {
     font-size: 65px;
     color: rgb(255, 255, 255);
     line-height: 0.8;
     text-align: center;
     margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 50px;
+    }
 
     &--light {
       font-weight: 100;
@@ -25,11 +31,20 @@
     &--bold {
       font-weight: 900;
       font-size: 100px;
+
+      @media (max-width: 768px) {
+        font-size: 70px;
+      }
     }
   }
 
   &__phone {
     position: relative;
+    height: 410px;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
 
   &__phone-icon {
@@ -44,6 +59,10 @@
     justify-content: center;
     font-weight: 500;
     margin-top: 80px;
+
+    @media (max-width: 500px) {
+      width: 90%;
+    }
   }
 
   &__applications {
@@ -51,18 +70,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   &__app {
     display: flex;
     width: 425px;
 
+    @media (max-width: 500px) {
+      width: 50%;
+      min-width: 200px;
+      margin: 0 !important;
+      justify-content: center;
+    }
+
     &--right {
       justify-content: flex-end;
+
+      @media (max-width: 768px) {
+        margin-right: 50px;
+      }
     }
 
     &:first-child {
-      margin-right: 150px;
+      margin-right: auto;
+
+      @media (max-width: 768px) {
+        margin: 0;
+        margin-bottom: 50px;
+        margin-left: 50px;
+      }
     }
 
     > div:first-child {
@@ -79,6 +122,12 @@
     flex-direction: column;
     max-width: 225px;
     color: white;
+
+    @media (max-width: 500px) {
+      align-items: center !important;
+      text-align: center !important;
+      margin-right: 0 !important;
+    }
 
     &--right {
       align-items: flex-end;

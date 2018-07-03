@@ -47,6 +47,11 @@
     width: 100%;
     text-align: center;
     font-weight: 400;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   &__text {
