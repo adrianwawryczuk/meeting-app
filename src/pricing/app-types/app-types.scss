@@ -32,10 +32,7 @@
   &__small-container {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  &__background-text {
-
+    justify-content: center;
   }
 
   &__type {
@@ -51,6 +48,7 @@
     margin: 5px;
     flex-grow: 1;
     transition: 50ms ease-in-out;
+    min-height: 650px;
 
     &--premium {
       border-top: 7px solid #18283b;
@@ -189,5 +187,9 @@
     font-size: 45px;
     color: #19B9F2;
     margin: 40px;
+
+    @media (max-width: 1120px) {
+      width: 100%;
+    }
   }
 }
