@@ -8,6 +8,10 @@
 
   &__background-text {
     top: -20%;
+
+    @media (max-width: 768px) {
+      top: 0;
+    }
   }
 
   &__applications {
@@ -15,18 +19,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   &__app {
     display: flex;
     width: 425px;
 
+    @media (max-width: 500px) {
+      width: 50%;
+      min-width: 200px;
+      margin: 0 !important;
+      justify-content: center;
+    }
+
     &--right {
       justify-content: flex-end;
+
+      @media (max-width: 768px) {
+        margin-right: 50px;
+      }
     }
 
     &:first-child {
-      margin-right: 150px;
+      margin-right: auto;
+
+      @media (max-width: 768px) {
+        margin: 0;
+        margin-bottom: 50px;
+        margin-left: 50px;
+      }
     }
 
     > div:first-child {
@@ -43,6 +71,12 @@
     flex-direction: column;
     max-width: 225px;
     font-weight: 600;
+
+    @media (max-width: 500px) {
+      align-items: center !important;
+      text-align: center !important;
+      margin-right: 0 !important;
+    }
 
     &--right {
       align-items: flex-end;
@@ -71,12 +105,21 @@
 
   &__phone {
     position: relative;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
+
+    > img {
+      height: 414px;
+      width: 210px;
+    }
   }
 
   &__phone-icon {
     position: absolute !important;
-    left: 103px;
-    top: 157px;
+    left: 108px;
+    top: 160px;
     width: 40px;
   }
 

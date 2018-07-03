@@ -108,6 +108,12 @@
       }
     }
 
+    &:last-child {
+      @media (max-width: 500px) {
+        margin-top: 50px !important;
+      }
+    }
+
     > div:first-child {
       margin-right: 20px;
     }
