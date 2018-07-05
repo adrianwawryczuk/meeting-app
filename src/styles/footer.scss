@@ -78,6 +78,10 @@ html .footer {
       margin-bottom: 5px;
       font-weight: 500;
 
+      @media (max-width: 768px) {
+        margin: 5px;
+      }
+
       &:hover {
         color: #1EB8F1;
       }
