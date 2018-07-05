@@ -4,7 +4,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
   z-index: 1;
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
 
 html {
   overflow-x: hidden; }
@@ -189,7 +190,7 @@ a:hover {
   margin: 0 auto;
   align-items: center;
   max-width: 1170px;
-  height: 47px;
+  height: 68px;
   position: initial; }
 
 .nav__menu-launcher-input {
@@ -229,7 +230,7 @@ a:hover {
     width: 100vw;
     overflow: hidden; }
   .nav_menu--visible {
-    height: 280px; } }
+    height: 400px; } }
 
 .nav__logo {
   display: flex;
@@ -243,27 +244,23 @@ a:hover {
   font-weight: 400;
   font-size: 14px;
   margin-left: 25px; }
-
-.nav__button:last-child {
-  margin-left: 10px; }
-
-@media (max-width: 500px) {
-  .nav__button {
-    display: none; } }
-
-.nav__button--responsive {
-  display: none !important; }
-
-@media (max-width: 500px) {
+  @media (max-width: 995px) {
+    .nav__button {
+      display: none !important; } }
+  .nav__button :last-child {
+    margin-left: 10px; }
   .nav__button--responsive {
-    display: block;
-    margin: 0;
-    text-align: center;
-    margin: 5px;
-    padding: 5px; } }
+    display: none !important; }
+    @media (max-width: 995px) {
+      .nav__button--responsive {
+        display: block !important;
+        text-align: center;
+        line-height: 20px;
+        margin: 10px !important;
+        padding: 5px !important; } }
 
 .nav__link {
-  margin: 5px;
+  margin: 10px;
   padding: 5px;
   display: flex;
   justify-content: center;
