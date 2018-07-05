@@ -8,18 +8,9 @@ module.exports = {
         pricing: './src/pricing/pricing.js',
     },
     output: {
-        path: __dirname + '/dist',
-        publicPath: __dirname + '/dist',
-    },
-    module: {
+        path: __dirname + '/build/dist',
+    },    module: {
         rules: [
-            {
-                test: /\.html$/,
-                exclude: /(node_modules)/,
-                use: [
-                    "html-loader",
-                ]
-            },
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
