@@ -8,14 +8,30 @@ function initPricing() {
     animateImages();
 }
 
-window.gotoAppTypes = () => {
+window.gotoAppTypes = (type) => {
     scrollTo('.app-types');
+    setAppTypeActive(type);
 }
 
 window.gotoDifference = () => {
     scrollTo('.difference');
 }
 
+window.setAppTypeActive = (type) => {
+    clearTypeSelection();
+
+    if (type) {
+        document.querySelector(`[data-type="${type}"]`).classList.add('active');
+    }
+
+    setTimeout(clearTypeSelection, 5000);
+}
+
+function clearTypeSelection() {
+    document.querySelectorAll('[data-type]').forEach(element => {
+        element.classList.remove('active');
+    });
+}
 function scrollTo(selector) {
     document.querySelector(selector).scrollIntoView({
         behavior: 'smooth'
