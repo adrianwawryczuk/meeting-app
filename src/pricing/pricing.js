@@ -10,7 +10,7 @@ function initPricing() {
 
 window.gotoAppTypes = (type) => {
     scrollTo('.app-types');
-    setAppTypeActive(type);
+    setTimeout(() => setAppTypeActive(type), 750);
 }
 
 window.gotoDifference = () => {
