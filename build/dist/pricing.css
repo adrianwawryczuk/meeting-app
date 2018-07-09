@@ -681,6 +681,8 @@ html .services {
     margin-bottom: 40px;
     flex-grow: 1; }
   html .services__button {
+    cursor: default;
+    font-weight: 700;
     margin-bottom: 30px;
     color: #19B9F2; }
   html .services__background-text {
@@ -815,7 +817,7 @@ html .app-types {
     padding-bottom: 15px;
     margin: 5px;
     margin-top: 30px;
-    transition: 50ms ease-in-out;
+    transition: 100ms ease-in-out;
     min-height: 650px; }
     html .app-types__type--premium {
       border-top: 7px solid #18283b;
