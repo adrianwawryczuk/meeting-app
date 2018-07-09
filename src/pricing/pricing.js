@@ -10,7 +10,7 @@ function initPricing() {
 
 window.gotoAppTypes = (type) => {
     scrollTo('.app-types');
-    setTimeout(() => setAppTypeActive(type), 750);
+    setTimeout(() => setAppTypeActive(type), 1000);
 }
 
 window.gotoDifference = () => {
@@ -23,8 +23,6 @@ window.setAppTypeActive = (type) => {
     if (type) {
         document.querySelector(`[data-type="${type}"]`).classList.add('active');
     }
-
-    setTimeout(clearTypeSelection, 5000);
 }
 
 function clearTypeSelection() {
