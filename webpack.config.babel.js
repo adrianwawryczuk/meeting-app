@@ -26,18 +26,14 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader,
                     },
                     {
-                        loader: "css-loader" // translates CSS into CommonJS
+                        loader: "css-loader",
+                        options: {
+                            url: false
+                        },
                     },
                     {
-                        loader: "sass-loader" // compiles Sass to CSS
+                        loader: "sass-loader"
                     }
-                ]
-            },
-            {
-                test: /\.(png|jpg|jpeg|svg)$/,
-                exclude: /(node_modules)/,
-                use: [
-                    "url-loader",
                 ]
             },
             { test: /\.hbs/, loader: "handlebars-loader" }
