@@ -49,6 +49,11 @@ module.exports = {
             filename: 'pricing.html',
             template: './src/pricing/pricing.hbs'
         }),
+        new HtmlWebpackPlugin({
+            title: 'Features',
+            filename: 'features.html',
+            template: './src/features/features.hbs'
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
         })
