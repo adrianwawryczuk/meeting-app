@@ -17,6 +17,10 @@
     color: white;
     line-height: 1.2;
     text-align: center;
+
+    @media (max-width: 365px) {
+      font-size: 30px;
+    }
   }
 
   &__button {
