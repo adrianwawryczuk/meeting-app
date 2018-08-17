@@ -1,0 +1,22 @@
+@import "~owl.carousel/dist/assets/owl.theme.default.css";
+@import "~owl.carousel/dist/assets/owl.carousel.css";
+
+.cms {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__header {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(30, 184, 241);
+    text-transform: uppercase;
+    line-height: 1.2;
+    transform: matrix( 1,0,0,1.00003841225842,0,0);
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #2bb2ff !important;
+}

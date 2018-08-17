@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
@@ -11,7 +12,8 @@ module.exports = {
     },
     output: {
         path: __dirname + '/build/dist',
-    },    module: {
+    },
+    module: {
         rules: [
             {
                 test: /\.js$/,
@@ -22,7 +24,6 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                exclude: /(node_modules)/,
                 use: [
                     {
                         loader: 'style-loader' //MiniCssExtractPlugin.loader,
@@ -38,7 +39,7 @@ module.exports = {
                     }
                 ]
             },
-            { test: /\.hbs/, loader: "handlebars-loader" }
+            {test: /\.hbs/, loader: "handlebars-loader"}
         ],
     },
     plugins: [
@@ -56,6 +57,11 @@ module.exports = {
             title: 'Features',
             filename: 'features.html',
             template: './src/features/features.hbs'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
         }),
         // new MiniCssExtractPlugin({
         //     filename: "[name].css",
