@@ -5,9 +5,9 @@
   &__phones {
     display: flex;
     position: absolute;
-    margin-top: -450px;
+    margin-top: -250px;
     background-size: contain;
-    background-position: center;
+    background-position-y: 50px;
     background-repeat: no-repeat;
     background-image: url("../../images/otheriphonespng.png");
     min-height: 530px;
@@ -27,7 +27,6 @@
   }
 
   &__image {
-    margin-top: 230px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,6 +1,9 @@
 import './features.scss';
 import $ from 'jquery';
 import 'owl.carousel';
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
 
 $(document).ready(function(){
     $('.cms__owl').owlCarousel({
@@ -20,4 +23,14 @@ $(document).ready(function(){
         nav: false,
         startPosition: 9
     });
+
+    $('.top__discover').on('click', () => scrollTo('.features__phones'))
 });
+
+function scrollTo(selector) {
+    document.querySelector(selector).scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        offsetTop: -100
+    });
+}

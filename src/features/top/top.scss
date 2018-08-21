@@ -20,6 +20,16 @@
     font-size: 20px;
   }
 
+  &__discover {
+    background: transparent !important;
+    border: 2px solid white;
+  }
+
+  &__discover-image {
+    width: 10px;
+    margin-right: 20px;
+  }
+
   &__buttons {
     display: flex;
     justify-content: center;
