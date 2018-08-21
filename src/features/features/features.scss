@@ -11,6 +11,10 @@
     background-repeat: no-repeat;
     background-image: url("../../images/otheriphonespng.png");
     min-height: 530px;
+    
+    @media (max-width: 894px) {
+      background-image: none;
+    }
   }
 
   &__phone {
