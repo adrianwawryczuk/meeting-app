@@ -26,7 +26,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     {
-                        loader: 'style-loader' //MiniCssExtractPlugin.loader,
+                        loader: MiniCssExtractPlugin.loader,
                     },
                     {
                         loader: "css-loader",
@@ -63,8 +63,8 @@ module.exports = {
             jQuery: 'jquery',
             'window.jQuery': 'jquery'
         }),
-        // new MiniCssExtractPlugin({
-        //     filename: "[name].css",
-        // })
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+        })
     ],
 };
