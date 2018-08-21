@@ -1,17 +1,18 @@
 .features {
-  padding-bottom: 750px;
+  padding-bottom: 650px;
   background-color: #f4f4f4;
 
   &__phones {
     display: flex;
+    padding-top: 70px;
     position: absolute;
-    margin-top: -250px;
+    margin-top: -230px;
     background-size: contain;
-    background-position-y: 50px;
+    background-position-y: 120px;
     background-repeat: no-repeat;
-    background-image: url("../../images/otheriphonespng.png");
+    background-image: url(../../images/otheriphonespng.png);
     min-height: 530px;
-    
+
     @media (max-width: 894px) {
       background-image: none;
     }
@@ -43,7 +44,7 @@
 
   &__info {
     margin-top: 20px;
-    margin-bottom : 20px;
+    margin-bottom: 20px;
     font-size: 18px;
   }
 
@@ -57,5 +58,42 @@
     text-align: center;
     font-size: 14px;
     line-height: 25px;
+  }
+}
+
+.features {
+  .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 28%;
+  }
+
+  .owl-prev {
+    width: 30px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    margin-left: -70px !important;
+    display: block !important;
+    border: 0px solid black;
+  }
+
+  .owl-next {
+    width: 30px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    right: -75px !important;
+    display: block !important;
+    border: 0px solid black;
+  }
+
+  .owl-prev i, .owl-next i {
+    transform: scale(2, 3);
+    color: #19B9F2;
+  }
+
+  .owl-theme .owl-nav [class*='owl-']:hover {
+    background: none !important;
   }
 }

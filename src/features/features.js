@@ -20,8 +20,9 @@ $(document).ready(function(){
         items:1,
         loop:false,
         dots: false,
-        nav: false,
-        startPosition: 9
+        startPosition: 8,
+        nav: true,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
     });
 
     $('.top__discover').on('click', () => scrollTo('.features__phones'))
@@ -30,7 +31,6 @@ $(document).ready(function(){
 function scrollTo(selector) {
     document.querySelector(selector).scrollIntoView({
         behavior: 'smooth',
-        block: 'center',
-        offsetTop: -100
+        block: 'center'
     });
 }
