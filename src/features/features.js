@@ -12,7 +12,16 @@ $(document).ready(function(){
         loop:false,
         dots: true,
         margin:60,
-        startPosition: 1
+        startPosition: 1,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            960: {
+                items: 2
+            }
+        }
     });
 
     $('.features__phones').owlCarousel({

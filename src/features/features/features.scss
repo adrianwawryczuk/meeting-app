@@ -2,6 +2,14 @@
   padding-bottom: 650px;
   background-color: #f4f4f4;
 
+  @media (max-width: 700px) {
+    padding-bottom: 750px;
+  }
+
+  @media (max-width: 450px) {
+    padding-bottom: 800px;
+  }
+
   &__phones {
     display: flex;
     padding-top: 70px;
@@ -46,12 +54,14 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 18px;
+    text-align: center;
   }
 
   &__title {
     color: #19B9F2;
     font-size: 25px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   &__description {
