@@ -1,0 +1,58 @@
+.features {
+  padding-bottom: 750px;
+  background-color: #f4f4f4;
+
+  &__phones {
+    display: flex;
+    position: absolute;
+    margin-top: -450px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../images/otheriphonespng.png");
+    min-height: 530px;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__feature {
+    max-height: 427px;
+    padding: 0px 71px 0 59px;
+    width: auto !important;
+    margin-bottom: 39px;
+  }
+
+  &__image {
+    margin-top: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../images/iphone.png");
+  }
+
+  &__info {
+    margin-top: 20px;
+    margin-bottom : 20px;
+    font-size: 18px;
+  }
+
+  &__title {
+    color: #19B9F2;
+    font-size: 25px;
+    margin-bottom: 20px
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
