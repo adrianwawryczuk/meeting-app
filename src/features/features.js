@@ -26,7 +26,7 @@ $(document).ready(function(){
 
     $('.features__phones').owlCarousel({
         center: true,
-        items:1,
+        items:9,
         loop:false,
         dots: false,
         startPosition: 8,
