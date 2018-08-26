@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
     mode: 'development',
@@ -11,15 +12,30 @@ module.exports = {
             './src/features/features.js'],
     },
     output: {
-        path: __dirname + '/build/dist',
+        path: path.resolve(__dirname, 'build/dist'),
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /(node_modules)/,
+                exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
                 use: [
                     "babel-loader",
+                ]
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            url: false
+                        },
+                    },
                 ]
             },
             {

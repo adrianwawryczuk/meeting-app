@@ -3,6 +3,7 @@
   background-image: linear-gradient(20deg, #15416e 0%, #0d88d9 100%);
   padding-top: 150px;
   padding-bottom: 230px;
+  z-index: 0;
 
   @media (max-width: 450px) {
     padding-top: 20px;
@@ -17,7 +18,7 @@
     margin-bottom: 10px;
 
     @media (max-width: 450px) {
-      font-size: 40px;
+      font-size: 34px;
     }
   }
 
