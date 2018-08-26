@@ -61,7 +61,7 @@ $(document).ready(function(){
 
     features.on('transitionEnd', resizeFeaturesContainer)
 
-    $('.top__discover').on('click', () => scrollTo('.swiper-container'))
+    $('.top__discover').on('click', () => scrollTo('.features__container'))
 });
 
 function resizeFeaturesContainer() {
