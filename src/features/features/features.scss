@@ -194,4 +194,34 @@
     z-index: 90;
   }
 
+  .swiper-button-next {
+     background-image: url("../../images/arrow-point-to-right.png");
+  }
+
+  .swiper-button-prev {
+    background-image: url("../../images/arrow-point-to-left.png");
+  }
+}
+.owl-theme .owl-dots .owl-dot {
+  outline: none !important;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: #cccccc !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #1eb8f1 !important;
+  box-shadow: 0px 0px 0px 5px rgba(210, 241, 252, 1);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  display: flex;
+  justify-content: center;
 }
