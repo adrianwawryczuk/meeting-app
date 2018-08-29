@@ -48,6 +48,11 @@
     transition: all linear 100ms;
   }
 
+  &__title {
+
+  }
+
+
   &__info {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -73,23 +78,26 @@
   }
 
   &__title {
-    color: #19B9F2;
+    color: #cccccc;
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
-    opacity: 0;
     transition: all linear 100ms;
     transition-delay: 50ms;
     max-width: 100vh;
     width: 80vh;
+
     @media (max-width: 750px) {
       width: 50vh;
+      opacity: 0;
     }
 
     @media (max-width: 500px) {
       width: 300px;
     }
+
     .swiper-slide-active & {
+      color: #19B9F2;
       opacity: 1;
     }
   }

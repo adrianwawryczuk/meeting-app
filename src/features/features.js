@@ -69,30 +69,8 @@ function resizeFeaturesContainer() {
     const height = $('.features__container').outerHeight();
 
     $featuresContainer.css({
-        paddingBottom: height - 150
+        paddingBottom: height - 200
     });
-}
-
-const positions = [
-    'position-0',
-    'position-1',
-    'position-2',
-    'position-3',
-    'position-4',
-    'position-5',
-    'position-6',
-    'position-7',
-    'position-8',
-];
-
-function animateCarousel() {
-    document.querySelectorAll('.owl-item').forEach(element => {
-        element.classList.remove(...positions);
-    });
-
-    document.querySelectorAll('.owl-item.active').forEach((element, index) => {
-        element.classList.add(positions[index]);
-    })
 }
 
 function scrollTo(selector) {
